@@ -9,38 +9,31 @@ format:
     incremental: false
     transition: slide
     mouse-wheel: true
-    footer: "Slides por [Luísa Gisele Böck](https://luisa.rbind.io/), feito com [Quarto](https://quarto.org/docs/presentations/revealjs/index.html). Código disponível no [GitHub](https://github.com/lgiselebock/2023-jai-ufsm)."
+    # footer: "Slides por [Luísa Gisele Böck](https://luisa.rbind.io/), feito com [Quarto](https://quarto.org/docs/presentations/revealjs/index.html). Código disponível no [GitHub](https://github.com/lgiselebock/2023-jai-ufsm)."
     theme: ["custom.scss"]
     slide-number: c/t
     show-slide-number: all
     bibliography: references.bib
     csl: csl/abnt-ufrgs.csl
+    self-contained: false
 title-slide-attributes:
   data-background-image: img/logo-jai.png
   data-background-position: top
   data-background-size: 85%
 ---
 
-## O que é a Razão de Dependência?
+## Introdução
 
-- Mede a participação relativa do contingente populacional potencialmente inativo que necessitaria ser sustentado pela parcela da população potencialmente produtiva, pressupondo que os jovens (pessoas com até 14 anos) e os idosos (pessoas acima de 65 anos) de uma população são dependentes economicamente dos demais [@datasus_datasus_2005; @ifi_relatorio_2019];
-
-- É a quantidade de crianças (população menor de 14 anos) e idosos (população acima de 65 anos) que existe no país para cada pessoa em atividade ativa (entre 15 e 64 anos) [@pitta_evolucao_2020];
-
-
-- A Razão de Dependência pode ser decomposta em:
-  - **Razão de Dependência de Jovens (RDJ):** razão entre a população de 0 a 14 anos e a população de 15 a 64 anos;
-  - **Razão de Dependência de Idosos (RDI):** razão entre a população de 65 anos ou mais e a população de 15 a 64 anos.
-- A soma das duas componentes individuais fornece a **Razão de Dependência Total (RDT)** [@ifi_relatorio_2019];
-
-- A importância da Razão de Dependência está no acompanhamento do grau de dependência econômica de uma determinada população, na sinalização do processo de rejuvenescimento ou de envelhecimento populacional de um espaço geográfico e na formulação de políticas públicas em área de interesse, como: saúde, educação e previdência social [@datasus_datasus_2005].
+<!-- Falar sobre a relação entre transição demográfica, razão de dependência e a economica de um país -->
 
 
 ##
 
+<br>
+
 ### Objetivos
 
-- Analisar a evolução da Razão de Dependência Demográfica do Brasil para o períod entre 2000 e 2060;
+- Analisar a evolução da Razão de Dependência Demográfica do Brasil para o período entre 2000 e 2060;
 
 - Projetar o grau de dependência para as próximas décadas, até 2060, com base em projeções populacionais do IBGE.
 
@@ -53,8 +46,100 @@ title-slide-attributes:
 - Análises estatísticas a partir da coleta de dados secundários provenientes do [Instituto Brasileiro de Geografia e Estatística (IBGE)](https://www.ibge.gov.br/pt/inicio.html):
   - [Censo Demográfico de 2000](https://www.ibge.gov.br/estatisticas/sociais/trabalho/9663-censo-demografico-2000.html?edicao=10558);
   - [Censo Demográfico de 2010](https://www.ibge.gov.br/estatisticas/sociais/populacao/9662-censo-demografico-2010.html?=&t=sobre);
-  - [Censo Demográfico de 2022](https://censo2022.ibge.gov.br);
+  <!-- - [Censo Demográfico de 2022](https://censo2022.ibge.gov.br); -->
   - [Projeções Populacionais](https://www.ibge.gov.br/estatisticas/sociais/populacao/9109-projecao-da-populacao.html?=&t=resultados).
+
+
+## Transição Demográfica
+
+- Corresponde ao processo de mudança na estrutura etária de uma população; começando com o declínio da mortalidade, seguido pelo declínio da fecundidade, resultando, primeiramente, em um intervalo de aumento, acompanhada da queda do crescimento populacional e, finalmente, no envelhecimento da população [@ferreira_transicao_2020];
+
+- De acordo com Ronald Lee [-@lee_demographic_2003], a transição demográfica global iniciou por volta do ano 1800, na Europa, se espalhou por todo o mundo e deverá ser concluída em torno de 2100;
+
+- Durante a transição demográfica, a proporção do grupo em idade de trabalho aumenta, tornando-se predominante na população total. Isso resulta em ampla oferta de trabalho na economia. Esse fenômeno é conhecido como **Bônus Demográfico** para o crescimento econômico [@ferreira_transicao_2020];
+
+- Para Bloom *et al.* [-@bloom_contribution_2010], os maiores condutores da aceleração do crescimento na China e na Índica foram as mudanças demográficas, como aumento da expectativa de vida e queda da fecundidade, melhorias na saúde e na produtividade dos trabalhadores;
+
+  - destaque para o Leste Asiático, cuja performance econômica foi acompanhada de perto pela transição demográfica e pelas mudanças resultantes na estrutura etária da população [@ferreira_transicao_2020];
+
+- Os países latino-americanos deveriam ter experimentado mudanças demográficas semelhantes aos países asiáticos, mas não foram capazes de perceber o Bônus Demográfico, em razão do seu ambiente político e econômico instável [@bloom_global_2004; @ferreira_transicao_2020]
+
+## Transição Demográfica no Brasil
+
+### Pirâmides Etárias (2000 - 2060)
+
+:::: columns
+::: {.column width="50%"}
+
+```{r piramide-2000, echo = FALSE, warning = FALSE, message = FALSE, fig.width = 10, fig.height = 11}
+knitr::include_graphics("graficos_files/figure-html/piramide-2000-1.png")
+```
+
+:::
+
+::: {.column width="50%"}
+
+```{r piramide-2060, echo = FALSE, warning = FALSE, message = FALSE, fig.width = 10, fig.height = 11}
+knitr::include_graphics("graficos_files/figure-html/piramide-2060-1.png")
+```
+
+:::
+
+::::
+
+
+## Transição Demográfica no Brasil
+
+- Desde 1970, o Brasil experimenta uma revolução demográfica. As taxas de mortalidade caíram, primeiramente, a um ritmo mais rápido do que as taxas de natalidade, resultando em uma aceleração do crescimento populacional [@ferreira_transicao_2020].
+
+- O país está no meio do precesso de transição demográfica. Nos próximos anos, as taxas brutas de mortalidade ficarão praticamente estáveis, enquanto as taxas brutas de natalidade vão continuar caindo até o ano de 2050 e, depois, se estabilizarão, o que vai reduzir o ritmo de crescimento populacional [@ferreira_transicao_2020].
+
+- O peso relativo da população jovem tem diminuído em razão do declínio acentuado da fecundidade. Em compensação, o número de idosos tem aumentado a uma velocidade mais rápida e, a partir de 2030, será o grupo que mais crescerá em termos absolutos [@ferreira_transicao_2020].
+
+
+
+
+## Transição Demográfica no Brasil
+
+```{r transicao-demografica, echo = FALSE, warning = FALSE, message = FALSE, fig.width = 10, fig.height = 6, fig.dpi = 600}
+knitr::include_graphics("graficos_files/figure-html/transicao-demografica-1.png")
+```
+
+
+## Transição Demográfica no Brasil
+
+- No início, há uma aceleração do crescimento vegetativo da população, depois uma desaceleração do crescimento e, por fim, pode ocorrer uma estabilização ou descrescimento da população [@alves_transicao_2008];
+
+- É possível observar:
+
+  - que a participação dos jovens vem diminuindo constantemente na população brasileira;
+
+  - um aumento inicial da população em idade ativa (PIA) e, posteriormente, uma redução dessas pessoas no mercado de trabalho;
+
+  - um incremento da população idosa em proporção cada vez maiores.
+
+- Dessa forma, há um padrão de crescimento diferenciado por idade:
+
+  - baixo ou negativo, no segmento jovem;
+
+  - médio ou baixo, na população em idade ativa, entre as décadas de 2030 e 2040, e negativo no restante do período;
+
+  - muito alto no contingente de idosos.
+
+- Esse padrão de crescimento caracterizará a transição da estrutura etária brasileira, provocando alterações nas Razões de Dependência entre os três principais grupos etários: jovens, adultos e idosos [@alves_transicao_2008; @carvalho_transicao_2008].
+
+## Razão de Dependência
+
+- Mede a participação relativa do contingente populacional potencialmente inativo que necessitaria ser sustentado pela parcela da população potencialmente produtiva, pressupondo que os jovens (pessoas com até 14 anos) e os idosos (pessoas acima de 65 anos) de uma população são dependentes economicamente dos demais [@datasus_datasus_2005; @ifi_relatorio_2019];
+
+- É a quantidade de crianças (população menor de 14 anos) e idosos (população acima de 65 anos) que existe no país para cada pessoa em atividade ativa (entre 15 e 64 anos) [@pitta_evolucao_2020];
+
+- A Razão de Dependência pode ser decomposta em:
+  - **Razão de Dependência de Jovens (RDJ):** razão entre a população de 0 a 14 anos e a população de 15 a 64 anos;
+  - **Razão de Dependência de Idosos (RDI):** razão entre a população de 65 anos ou mais e a população de 15 a 64 anos.
+- A soma das duas componentes individuais fornece a **Razão de Dependência Total (RDT)**.
+
+- A sua importância está no acompanhamento do grau de dependência econômica de uma determinada população, na sinalização do processo de rejuvenescimento ou de envelhecimento populacional de um espaço geográfico e na formulação de políticas públicas em área de interesse, como: saúde, educação e previdência social [@datasus_datasus_2005].
 
 
 ## Como a Razão de Dependência é calculada?
@@ -81,15 +166,27 @@ $$
 \text{RDI} = \dfrac{\text{número de pessoas com 65 anos ou mais}}{\text{número de pessoas entre 15 e 64 anos}} \times 100
 $$
 
-## Transição Demográfica
+
+## Razão de Dependência no Brasil
 
 
+```{r razao-dependencia-brasil, fig.align = "center", fig.width = 12, fig.height = 7, out.width = "100%", echo = FALSE, message = FALSE, warning = FALSE, fig.dpi = 600}
+knitr::include_graphics("graficos_files/figure-html/razao-dependencia-brasil-1.png")
+```
 
 
-<!-- ### Pirâmides Etárias (2000 - 2060) -->
+## Razão de Dependência no Brasil
 
+- Houve uma redução da Razão de Dependência de Jovens (RDJ) e um aumento da Razão de Dependência de Idosos (RDI).
 
+- A Razão de Dependência Total (RDT) apresentou queda entre 2000 e 2020, com o aumento relativo da população em idade ativa em relação à população total, promovendo, assim, uma possibilidade de crescimento econômico impulsionado pelo Bônus Demográfico [@pereima_transicao_2013].
 
+- Entretanto, segundo as projeções populacionais, a Razão de Dependência Total (RDT) voltará a aumentar após 2030, devido a diminuição da população em idade ativa e ao envelhecimento da população, indicando o fim do Bônus Demográfico.
 
-## Referências
+- O principal componente da redução da carga de dependência foi a queda da Razão de Dependência de Jovens (RDJ) que vem apresentando um declínio continuado em decorrência da queda da fecundidade. Essa redução foi tão significativa que contrabalançou o aumento da carga de dependência de idosos, que vem crescendo em razão do aumento da expectativa de vida e da redução da mortalidade em idades avançadas [@alves_transicao_2008].
 
+- A Razão de Dependência Total (RDT) começará a crescer a partir da década de 2020, impulsionada pelo maior crescimento da Razão de Dependência dos Idosos (RDI) [@ifi_relatorio_2019]. Esta mudança não será homogênea entre as diferentes regiões do país [@pitta_evolucao_2020].
+
+---
+
+### Referências {.smaller}
