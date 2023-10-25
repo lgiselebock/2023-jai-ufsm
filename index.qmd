@@ -15,7 +15,7 @@ format:
     show-slide-number: all
     bibliography: references.bib
     csl: csl/abnt-ufrgs.csl
-    self-contained: false
+    citation-hover: true
 title-slide-attributes:
   data-background-image: img/logo-jai.png
   data-background-position: top
@@ -25,6 +25,18 @@ title-slide-attributes:
 ## Introdução
 
 <!-- Falar sobre a relação entre transição demográfica, razão de dependência e a economica de um país -->
+
+- A transição demográfica teve inicio na Europa Ocidental a partir do processo de urbanização, sendo difundida por todo o mundo no século XX. Segundo Kirk [-@kirk_demographic_1996], os principais fatores de influenciaram esse processo foram:
+
+  - a queda da taxa de mortalidade, em razão, principalmente, das melhorias na infraestrutura, na medicina e no saneamento básico;
+  
+  - a queda da taxa de fecundidade, graças ao surgimento de uma população mais urbana, ocorrida em razão do desenvolvimento industrial, da inserção da mulher no mercado de trabalho, entre outras causas.
+
+- A estrutura demográfica de uma população descreve a sua distribuição etária, podendo ser crucial para explicar o crescimento econômico de um país [@ferreira_transicao_2020].
+
+- De acordo com Pereima e Porsse [-@pereima_transicao_2013], o crescimento econômico é impulsionado durante o período chamado Bônus Demográfico, em que a participação da população em idade ativa (entre 15 e 64 anos) é superior que a participação da população dependente (entre 0 e 14 anos e acima de 65 anos).
+
+- Para observar o efeito da transição demográfica de uma população, utiliza-se a Razão de Dependência Demográfica que mede a participação relativa da população dependente que precisa ser sustentada pela população em idade ativa [@pereima_transicao_2013].
 
 
 ##
@@ -52,13 +64,13 @@ title-slide-attributes:
 
 ## Transição Demográfica
 
-- Corresponde ao processo de mudança na estrutura etária de uma população; começando com o declínio da mortalidade, seguido pelo declínio da fecundidade, resultando, primeiramente, em um intervalo de aumento, acompanhada da queda do crescimento populacional e, finalmente, no envelhecimento da população [@ferreira_transicao_2020];
+- Corresponde ao processo de mudança na estrutura etária de uma população; começando com o declínio da mortalidade, seguido pelo declínio da fecundidade, que resulta em um intervalo de aumento, acompanhada da queda do crescimento populacional e no envelhecimento da população [@ferreira_transicao_2020];
 
 - De acordo com Ronald Lee [-@lee_demographic_2003], a transição demográfica global iniciou por volta do ano 1800, na Europa, se espalhou por todo o mundo e deverá ser concluída em torno de 2100;
 
 - Durante a transição demográfica, a proporção do grupo em idade de trabalho aumenta, tornando-se predominante na população total. Isso resulta em ampla oferta de trabalho na economia. Esse fenômeno é conhecido como **Bônus Demográfico** para o crescimento econômico [@ferreira_transicao_2020];
 
-- Para Bloom *et al.* [-@bloom_contribution_2010], os maiores condutores da aceleração do crescimento na China e na Índica foram as mudanças demográficas, como aumento da expectativa de vida e queda da fecundidade, melhorias na saúde e na produtividade dos trabalhadores;
+- Para Bloom *et al.* [-@bloom_contribution_2010], os maiores condutores da aceleração do crescimento na China e na Índia foram as mudanças demográficas, como aumento da expectativa de vida e queda da fecundidade, melhorias na saúde e na produtividade dos trabalhadores;
 
   - destaque para o Leste Asiático, cuja performance econômica foi acompanhada de perto pela transição demográfica e pelas mudanças resultantes na estrutura etária da população [@ferreira_transicao_2020];
 
@@ -88,15 +100,13 @@ knitr::include_graphics("graficos_files/figure-html/piramide-2060-1.png")
 ::::
 
 
-## Transição Demográfica no Brasil
+## Transição Demográfica no Brasil {.center}
 
 - Desde 1970, o Brasil experimenta uma revolução demográfica. As taxas de mortalidade caíram, primeiramente, a um ritmo mais rápido do que as taxas de natalidade, resultando em uma aceleração do crescimento populacional [@ferreira_transicao_2020].
 
-- O país está no meio do precesso de transição demográfica. Nos próximos anos, as taxas brutas de mortalidade ficarão praticamente estáveis, enquanto as taxas brutas de natalidade vão continuar caindo até o ano de 2050 e, depois, se estabilizarão, o que vai reduzir o ritmo de crescimento populacional [@ferreira_transicao_2020].
+- O país está no meio do processo de transição demográfica. Nos próximos anos, as taxas brutas de mortalidade ficarão praticamente estáveis, enquanto as taxas brutas de natalidade vão continuar caindo até o ano de 2050 e, depois, se estabilizarão, o que vai reduzir o ritmo de crescimento populacional [@ferreira_transicao_2020].
 
 - O peso relativo da população jovem tem diminuído em razão do declínio acentuado da fecundidade. Em compensação, o número de idosos tem aumentado a uma velocidade mais rápida e, a partir de 2030, será o grupo que mais crescerá em termos absolutos [@ferreira_transicao_2020].
-
-
 
 
 ## Transição Demográfica no Brasil
@@ -114,7 +124,7 @@ knitr::include_graphics("graficos_files/figure-html/transicao-demografica-1.png"
 
   - que a participação dos jovens vem diminuindo constantemente na população brasileira;
 
-  - um aumento inicial da população em idade ativa (PIA) e, posteriormente, uma redução dessas pessoas no mercado de trabalho;
+  - um aumento inicial da população em idade ativa (PIA) e, posteriormente, uma redução dessas pessoas na proporção da população total;
 
   - um incremento da população idosa em proporção cada vez maiores.
 
@@ -122,7 +132,7 @@ knitr::include_graphics("graficos_files/figure-html/transicao-demografica-1.png"
 
   - baixo ou negativo, no segmento jovem;
 
-  - médio ou baixo, na população em idade ativa, entre as décadas de 2030 e 2040, e negativo no restante do período;
+  - médio ou baixo, na população em idade ativa, entre as décadas de 2000 e 2040, e negativo no restante do período;
 
   - muito alto no contingente de idosos.
 
@@ -186,6 +196,46 @@ knitr::include_graphics("graficos_files/figure-html/razao-dependencia-brasil-1.p
 - O principal componente da redução da carga de dependência foi a queda da Razão de Dependência de Jovens (RDJ) que vem apresentando um declínio continuado em decorrência da queda da fecundidade. Essa redução foi tão significativa que contrabalançou o aumento da carga de dependência de idosos, que vem crescendo em razão do aumento da expectativa de vida e da redução da mortalidade em idades avançadas [@alves_transicao_2008].
 
 - A Razão de Dependência Total (RDT) começará a crescer a partir da década de 2020, impulsionada pelo maior crescimento da Razão de Dependência dos Idosos (RDI) [@ifi_relatorio_2019]. Esta mudança não será homogênea entre as diferentes regiões do país [@pitta_evolucao_2020].
+
+
+## Bônus Demográfico (ou Janela de Oportunidade Demográfica) {.center}
+
+- Corresponde à menor carga de dependência economica da população em idade economicamente ativa (adultos) com relação à população em idade economicamente inativa (jovens e idosos), caracterizando um período de oportunidades favoráveis para o crescimento econômico [@vasconcelos_transicao_2012].
+
+- Ocorre quando a população em idade ativa é relativamente superior à população em idade não ativa.
+
+- De acordo com Alves [-@alves_transicao_2008]:
+
+  - inicia quando a porcentagem de População Economicamente Ativa (PEA, entre 15 e 64 anos) é maior que a porcentagem da Razão de Dependência Total (RDT).
+
+  - termina quando a porcentagem de População Economicamente Ativa (PEA, entre 15 e 64 anos) é menor que a porcentagem da Razão de Dependência Total (RDT).
+
+- O Crescimento econômico é impulsionado pelo Bônus Demográfico, quando a população em idade economicamente ativa (15 a 64 anos) cresce em relação à população jovem (menores de 15 anos) e idosa (maiores de 65 anos) [@pereima_transicao_2013].
+
+- No Brasil, o Bônus Demográfico está próximo ao fim [@ifi_relatorio_2019].
+
+
+## Conclusão {.center}
+
+- A estrutura demográfica de uma população descreve a sua distribuição etária, sendo importante para explicar o crescimento econômico de um país [@ferreira_transicao_2020].
+
+- A Transição Demográfica corresponde ao processo de mudança na estrutura etária de uma população. Durante esse período, a proporção do grupo em idade de trabalho aumenta em relação aos grupos dependentes, promovendo um crescimento econômico impulsionado pelo Bônus Demográfico [@ferreira_transicao_2020].
+
+- O Brasil encontra-se no meio do processo de transição demográfica, com redução da população jovem e aumento da população idosa, o que implica em mudanças na estrutura etária da população e na carga de dependência econômica [@alves_transicao_2008; @carvalho_transicao_2008].
+
+- A Razão de Dependência mede a participação relativa do contingente populacional potencialmente inativo (jovens e idosos) que necessitaria ser sustentado pela parcela da população potencialmente produtiva (adultos) [@datasus_datasus_2005; @ifi_relatorio_2019].
+
+
+## Conclusão {.center}
+
+- No Brasil, observa-se que está ocorrendo uma redução da Razão de Dependência de Jovens e um aumento da Razão de Dependência de Idosos. Entre os anos de 2000 e 2020, a Razão de Dependência Total apresentou queda com o aumento relativo da população em idade economicamente ativa, promovendo uma possibilidade de crescimento econômico impulsionado pelo Bônus Demográfico [@pereima_transicao_2013].
+
+- A queda da populacão em idade economicamente ativa e o fim do Bônus Demográfico devem ser vistos com preocupação, uma vez que afetam diretamente o mercado de trabalho e a estrutura da demanda efetiva, com impactos na composição da cesta de consumo da sociedade, na taxa de poupança e na capacidade de crescimento da economia do país [@pereima_transicao_2013].
+
+- O envelhecimento da população trará consequências não apenas para Previdência Social - cujo regime é baseado no sistema de repartição, onde os trabalhadores ativos sustentam os indivíduos aposentados - mas também para economia, impondo ao país o desafio de aumentar os níveis de produtividade do trabalho a fim de manter o crescimento econômico com meios sustentáveis [@ifi_relatorio_2019].
+
+- É necessário definir e implantar políticas públicas de maneira que as oportunidades possam ser criadas e aproveitadas no enfrentamento dos desafios gerados pelo novo padrão demográfico [@carvalho_transicao_2008].
+
 
 ---
 

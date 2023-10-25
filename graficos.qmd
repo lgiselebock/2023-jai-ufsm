@@ -14,7 +14,7 @@ showtext::showtext_auto()
 
 # Pirâmide Etária (2000)
 
-```{r piramide-2000, echo = FALSE, warning = FALSE, message = FALSE, fig.width = 10, fig.height = 11, fig.dp = 600}
+```{r piramide-2000, echo = FALSE, warning = FALSE, message = FALSE, fig.width = 10, fig.height = 11, fig.dp = 300}
 
 # load data
 url_2000 <- "https://www.populationpyramid.net/api/pp/76/2000/?csv=true"
@@ -94,7 +94,7 @@ pop_2000 |>
 
 # Pirâmide Etária (2060)
 
-```{r piramide-2060, echo = FALSE, warning = FALSE, message = FALSE, fig.width = 10, fig.height = 11, fig.dpi = 600}
+```{r piramide-2060, echo = FALSE, warning = FALSE, message = FALSE, fig.width = 10, fig.height = 11, fig.dpi = 300}
 
 # load data
 url_2060 <- "https://www.populationpyramid.net/api/pp/76/2060/?csv=true"
@@ -174,7 +174,7 @@ pop_2060 |>
 
 # Razão de Dependência
 
-```{r razao-dependencia-brasil, fig.align = "center", fig.width = 12, fig.height = 7, out.width = "100%", echo = FALSE, message = FALSE, warning = FALSE, fig.dpi = 600}
+```{r razao-dependencia-brasil, fig.align = "center", fig.width = 12, fig.height = 7, out.width = "100%", echo = FALSE, message = FALSE, warning = FALSE, fig.dpi = 300}
 
 razao_dependencia <- c("RDT", "RDI", "RDJ")
 x2000 <- c((9935100+50266122)/109597948, (9935100/109597948), (50266122/109597948))
@@ -219,7 +219,7 @@ palette <- c("#005c8b", "#e74645", "#006600")
 razao_dependencia_calculada |>
   ggplot() +
   aes(x = as.numeric(year), y = value, group = razao_dependencia) +
-  geom_line(aes(color = razao_dependencia), linewidth = 1.4) +
+  geom_line(aes(color = razao_dependencia), linewidth = 3) +
   annotate(
     "text",
     x = 2020,
@@ -263,7 +263,7 @@ razao_dependencia_calculada |>
 
 # Transição Demográfica
 
-```{r transicao-demografica, echo = FALSE, warning = FALSE, message = FALSE, fig.width = 10, fig.height = 6, fig.dpi = 600}
+```{r transicao-demografica, echo = FALSE, warning = FALSE, message = FALSE, fig.width = 10, fig.height = 6, fig.dpi = 300}
 
 palette_alpha <- c("#b6c5d7", "#b2cba9", "#ffc5bd")
 
